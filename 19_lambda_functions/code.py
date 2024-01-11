@@ -45,7 +45,7 @@ sequence = [1, 3, 5, 9,12]
 double = lambda x: x * 2
 doubled = map(double, sequence)
 
-print(list(doubled))
+# print(list(doubled))
 # doubled = map(lambda x: x * 2, sequence)
 # print(list(doubled))
 
@@ -54,3 +54,9 @@ print(list(doubled))
 # They are used to return a value calculated from its parameters.
 # Almost always single-line, so don't do anything complicated in them.
 # Very often better to just define a function and give it a proper name.
+
+
+year_born = [2001, 1995, 1996, 1997, 1998, 1999, 2000]
+get_age = lambda x:2024-x
+ages = map(get_age,year_born)
+print(list(ages))
