@@ -17,16 +17,33 @@ user_id = {user[1]: user for user in users}
 # username_input = input("Enter your username: ")
 # password_input = input("Enter your password: ")
 
-user_input = input("Enter your username: ")
-password_input = input("Enter your password: ")
+# user_input = input("Enter your username: ")
+# password_input = input("Enter your password: ")
 
-x,username,password = user_mapping[user_input]
+# x,username,password = user_mapping[user_input]
 
-if password_input == password:
+# if password_input == password:
+#     print("Your details are correct!")
+# else:
+#     print("Your details are incorrect.")
+
+
+userid_input = input("Enter your user id: ")
+username_input = input("Enter your username: ")
+
+user_id1, username, password = user_mapping[username_input]
+
+
+
+if str(userid_input) == str(user_id1):
     print("Your details are correct!")
 else:
     print("Your details are incorrect.")
 
+# if userid_input == user_id1:
+#     print("Your details are correct!")
+# else:
+#     print("Your details are incorrect.")
 
 # _, username, password = username_mapping[username_input]
 
