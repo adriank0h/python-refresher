@@ -1,43 +1,53 @@
-def add(x, y):
-    return x + y
+# def add(x, y):
+#     return x + y
 
 
-print(add(5, 7))
+# # print(add(5, 7))
+
+# # -- Written as a lambda --
+# subtract = lambda x,y : x-y
+# # print(subtract(5, 7))
+
+# add = lambda x, y: x + y
+# # print(add(5, 7))
+
+# # Four parts
+# # lambda
+# # parameters
+# # :
+# # return value
+
+# # Lambdas are meant to be short functions, often used without giving them a name.
+# # For example, in conjunction with built-in function map
+# # map applies the function to all values in the sequence
+
+
+# def double(x):
+#     return x * 2
+
+
+# sequence = [1, 3, 5, 9]
+
+
+# test = map(lambda x: x*2, sequence)
+# print(list(test))
+
+# doubled = [
+#     double(x) for x in sequence
+# ]  # Put the result of double(x) in a new list, for each of the values in `sequence`
+# doubled = map(double, sequence)
+# print(list(doubled))
 
 # -- Written as a lambda --
 
-add = lambda x, y: x + y
-print(add(5, 7))
+sequence = [1, 3, 5, 9,12]
 
-# Four parts
-# lambda
-# parameters
-# :
-# return value
-
-# Lambdas are meant to be short functions, often used without giving them a name.
-# For example, in conjunction with built-in function map
-# map applies the function to all values in the sequence
-
-
-def double(x):
-    return x * 2
-
-
-sequence = [1, 3, 5, 9]
-
-doubled = [
-    double(x) for x in sequence
-]  # Put the result of double(x) in a new list, for each of the values in `sequence`
+double = lambda x: x * 2
 doubled = map(double, sequence)
+
 print(list(doubled))
-
-# -- Written as a lambda --
-
-sequence = [1, 3, 5, 9]
-
-doubled = map(lambda x: x * 2, sequence)
-print(list(doubled))
+# doubled = map(lambda x: x * 2, sequence)
+# print(list(doubled))
 
 # -- Important to remember --
 # Lambdas are just functions without a name.
