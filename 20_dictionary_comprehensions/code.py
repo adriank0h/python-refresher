@@ -5,24 +5,35 @@ users = [
     (3, "username", "1234"),
 ]
 
-username_mapping = {user[1]: user for user in users}
-userid_mapping = {user[0]: user for user in users}
+user_mapping = {user[1]: user for user in users}
+user_id = {user[1]: user for user in users}
 
-print(username_mapping)
+# print(user_mapping['Bob'])
 
-print(username_mapping["Bob"])  # (0, "Bob", "password")
+# print(username_mapping["Bob"])  # (0, "Bob", "password")
 
 # -- Can be useful to log in for example --
 
-username_input = input("Enter your username: ")
+# username_input = input("Enter your username: ")
+# password_input = input("Enter your password: ")
+
+user_input = input("Enter your username: ")
 password_input = input("Enter your password: ")
 
-_, username, password = username_mapping[username_input]
+x,username,password = user_mapping[user_input]
 
 if password_input == password:
     print("Your details are correct!")
 else:
     print("Your details are incorrect.")
+
+
+# _, username, password = username_mapping[username_input]
+
+# if password_input == password:
+#     print("Your details are correct!")
+# else:
+#     print("Your details are incorrect.")
 
 # If we didn't use the mapping, the code would require us to loop over all users.
 # Shown on the side, pause the video if you want to read it thoroughly.
