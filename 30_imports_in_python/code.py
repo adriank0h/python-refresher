@@ -48,3 +48,5 @@ import mymodule
 
 
 
+x = mymodule.divide(100,2)
+print(x)
