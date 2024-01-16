@@ -22,3 +22,4 @@ class Student:
     def average(self):  # method
         return sum(self.grades) / len(self.grades)
 ```
+
