@@ -71,11 +71,27 @@ class Printer(Device):
         print(f"Printing {pages} pages.")
         self.remaining_pages -= pages
         self.capacity -= pages
+    def get_pages(self):
+        return self.remaining_pages
+        
         
 printer = Printer('Printer','USB',500)
 
-printer.print(100)
-print(printer)
+remaining_pages = printer.get_pages()
+while remaining_pages > 0:
+    printer.print(100)
+    print(printer)
+    remaining_pages = printer.get_pages()
+    if remaining_pages <= 0:
+        Printer.disconnect(printer)
+        printer.print(50)
+   
+           
 
-printer.print(20)
-print(printer)
+
+
+# printer.print(100)
+# print(printer)
+
+# printer.print(20)
+# print(printer)
