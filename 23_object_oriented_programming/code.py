@@ -1,56 +1,59 @@
-student = {"name": "Rolf", "grades": (89, 90, 93, 78, 90)}
+# student = {"name": "Rolf", "grades": (89, 90, 93, 78, 90)}
 
 
-def average(sequence):
-    return sum(sequence) / len(sequence)
+# def average(sequence):
+#     return sum(sequence) / len(sequence)
 
 
-print(average(student["grades"]))
+# print(average(student["grades"]))
 
-# But wouldn't it be nice if we could...
-# print(student.average()) ?
-
-
-class Student:
-    def __init__(self):
-        self.name = "Rolf"
-        self.grades = (89, 90, 93, 78, 90)
-
-    def average(self):
-        return sum(self.grades) / len(self.grades)
+# # But wouldn't it be nice if we could...
+# # print(student.average()) ?
 
 
-student = Student()
-print(student.average())
-# Identical to Student.average(student)
+# class Student:
+#     def __init__(self):
+#         self.name = "Rolf"
+#         self.grades = (89, 90, 93, 78, 90)
+
+#     def average(self):
+#         return sum(self.grades) / len(self.grades)
 
 
-# -- Parameters in __init__ --
+# student = Student()
+# print(student.average())
+# # Identical to Student.average(student)
 
 
-class Student:
-    def __init__(self, name, grades):
-        self.name = name
-        self.grades = grades
-
-    def average(self):
-        return sum(self.grades) / len(self.grades)
+# # -- Parameters in __init__ --
 
 
-student = Student("Bob", (36, 67, 90, 100, 100))
-print(student.average())
+# class Student:
+#     def __init__(self, name, grades):
+#         self.name = name
+#         self.grades = grades
 
-# -- Remember *args ? --
-
-
-class Student:
-    def __init__(self, name, *grades):
-        self.name = name
-        self.grades = grades
-
-    def average(self):
-        return sum(self.grades) / len(self.grades)
+#     def average(self):
+#         return sum(self.grades) / len(self.grades)
 
 
-student = Student("Bob", 36, 67, 90, 100, 100)
-print(student.average())
+# student = Student("Bob", (36, 67, 90, 100, 100))
+# print(student.average())
+
+# # -- Remember *args ? --
+
+
+# class Student:
+#     def __init__(self, name, *grades):
+#         self.name = name
+#         self.grades = grades
+
+#     def average(self):
+#         return sum(self.grades) / len(self.grades)
+
+
+# student = Student("Bob", 36, 67, 90, 100, 100)
+# print(student.average())
+
+class student: 
+    
