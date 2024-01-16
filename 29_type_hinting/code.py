@@ -49,7 +49,7 @@ class Book:
     @classmethod
     def hardcover(cls, name: str, page_weight: int) -> "Book":
         return cls(name, cls.TYPES[0], page_weight + 100)
-
+#the class is not declared yet as such u put the class name in quotes
     @classmethod
     def paperback(cls, name: str, page_weight: int) -> "Book":
         return cls(name, cls.TYPES[1], page_weight)
